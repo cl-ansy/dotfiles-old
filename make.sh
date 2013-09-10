@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc vimrc vim/autoload/ vim/bundle/ Xdefaults i3/config"    # list of files/folders to symlink in homedir
+files="bashrc vimrc vim Xdefaults i3 i3status.conf"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -21,9 +21,6 @@ echo "...done"
 echo "Changing to the $dir directory"
 cd $dir
 echo "...done"
-
-# make the vim directories for pathogen and plugins
-mkdir -p ~/.vim/
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 for file in $files; do

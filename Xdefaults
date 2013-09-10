@@ -19,3 +19,10 @@ URxvt*color12: RoyalBlue
 URxvt*scrollBar: true
 URxvt*scrollBar_right: false
 URxvt*scrollstyle: rxvt
+
+# tabs
+URxvt.perl-ext-common:  default,tabbed
+URxvt.tabbed.tabbar-fg: 0
+URxvt.tabbed.tabbar-bg: 15
+URxvt.tabbed.tab-for: 0
+URxvt.tabbed.tab-bg: 8
