@@ -162,10 +162,10 @@ exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/E7nof1h-Imgur.jpg
 # startup applications
 # Browser on Workspace 1
 exec --no-startup-id i3-msg 'workspace 1; exec google-chrome'
-# Editor on Workspace 2
-exec --no-startup-id i3-msg 'workspace 2; exec sublime'
 # Terminal on Workspace 3
 exec --no-startup-id i3-msg 'workspace 3; exec urxvt'
+# Editor on Workspace 2
+exec --no-startup-id i3-msg 'workspace 2; exec sublime'
 # Chat on Workspace 4 (pidgin twice; first starts, second shows buddy list)
 exec --no-startup-id i3-msg 'workspace 4; exec xchat; exec pidgin; exec pidgin'
 # Switch back to Workspace 1
