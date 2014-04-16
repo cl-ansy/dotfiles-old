@@ -37,10 +37,10 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -49,10 +49,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -157,16 +157,16 @@ bar {
 hide_edge_borders both
 
 # set the desktop wallpaper
-exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/E7nof1h-Imgur.jpg
+#exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/E7nof1h-Imgur.jpg
 
-# startup applications
-# Browser on Workspace 1
-exec --no-startup-id i3-msg 'workspace 1; exec google-chrome'
-# Terminal on Workspace 3
-exec --no-startup-id i3-msg 'workspace 3; exec urxvt'
-# Editor on Workspace 2
-exec --no-startup-id i3-msg 'workspace 2; exec sublime'
-# Chat on Workspace 4 (pidgin twice; first starts, second shows buddy list)
-exec --no-startup-id i3-msg 'workspace 4; exec xchat; exec pidgin; exec pidgin'
-# Switch back to Workspace 1
-i3-msg workspace 1
+# start NetworkManager
+exec --no-startup-id nm-applet
+
+# some gnome helpers
+exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
+exec --no-startup-id gnome-keyring-daemon
+#exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-fallback-mount-helper
+#exec --no-startup-id /usr/lib/fingerprint-gui/fingerprint-polkit-agent -d
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+#exec xcompmgr
