@@ -9,6 +9,7 @@
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 files="bashrc vimrc vim Xdefaults i3 i3status.conf"    # list of files/folders to symlink in homedir
+scripts="gtree ccat" #scripts to be linked to /usr/bin
 
 ##########
 
@@ -31,4 +32,9 @@ for file in $files; do
 done
 
 # create gtree.sh sym link to /usr/bin
-ln -s $dir/gtree.sh /usr/bin/gtree
+#ln -s $dir/gtree.sh /usr/bin/gtree
+#for script in $scripts; do
+#    script+=".sh"
+#    echo "Creating symlink to $script in /usr/bin"
+#    sudo ln -s $dir/${script%.*} /usr/bin/$script
+#done
