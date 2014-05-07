@@ -1,5 +1,5 @@
 URxvt*transparent: true
-URxvt*tintColor: Blue
+#URxvt*tintColor: Blue
 #URxvt*shading: 40
 URxvt*saveLines: 12000
 URxvt*foreground: White
@@ -14,8 +14,8 @@ URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=12:antialias=true:hinting=tr
 #URxvt*boldFont: xft:terminus:bold:pixelsize=15
 #URxvt*font:-*-courier-medium-r-normal-*-14-*-*-*-*-*-iso8859-1
 #URxvt*boldFont:-*-courier-bold-r-normal-*-14-*-*-*-*-*-iso8859-1
-URxvt*color4: RoyalBlue
-URxvt*color12: RoyalBlue
+#URxvt*color4: RoyalBlue
+#URxvt*color12: RoyalBlue
 URxvt*scrollBar: true
 URxvt*scrollBar_right: false
 URxvt*scrollstyle: rxvt
@@ -26,3 +26,28 @@ URxvt.tabbed.tabbar-fg: 0
 URxvt.tabbed.tabbar-bg: 15
 URxvt.tabbed.tab-for: 0
 URxvt.tabbed.tab-bg: 8
+
+# Black
+URxvt*color0:           #262626
+URxvt*color8:           #252525
+# Red
+URxvt*color1:           #C12121
+URxvt*color9:           #E50E0E
+# Green
+URxvt*color2:           #597b20
+URxvt*color10:          #89b83f
+# Yellow
+URxvt*color3:           #Ded838
+URxvt*color11:          #efef60
+# Blue
+URxvt*color4:           #265997
+URxvt*color12:          #3F6FD0
+# Magenta
+URxvt*color5:           #706c9a
+URxvt*color13:          #826ab1
+# Cyan
+URxvt*color6:           #69a2b0
+URxvt*color14:          #a1cdcd
+# White
+URxvt*color7:           #BBBBBB
+URxvt*color15:          #EEEEEF
