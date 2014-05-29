@@ -7,6 +7,7 @@ fi
 
 # User specific aliases and functions
 alias ls="ls -h --color=auto"
+alias gls="git status"
 export PS1='\[\033[01;30m\]\u@\h\n\[\033[00;31m\]\w \$ \[\033[00m\]'
 
 # location of python virtual envs
