@@ -91,7 +91,7 @@ bindsym $mod+1 workspace 1 : shell
 bindsym $mod+2 workspace 2 : dev
 bindsym $mod+3 workspace 3 : www
 bindsym $mod+4 workspace 4 : chat
-bindsym $mod+5 workspace 5
+bindsym $mod+5 workspace 5 : email
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -103,7 +103,7 @@ bindsym $mod+Shift+1 move container to workspace 1 : shell
 bindsym $mod+Shift+2 move container to workspace 2 : dev
 bindsym $mod+Shift+3 move container to workspace 3 : www
 bindsym $mod+Shift+4 move container to workspace 4 : chat
-bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+5 move container to workspace 5 : email
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
@@ -116,6 +116,8 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# lock i3
+bindsym $mod+Shift+x exec ~/dotfiles/i3/lock.sh
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -144,8 +146,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # keyboard volume controls
-bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q sset Master 5%- unmute
+bindsym XF86AudioRaiseVolume exec amixer -q sset Master 2%+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q sset Master 2%- unmute
 bindsym XF86AudioMute exec amixer -q sset Master toggle
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -154,19 +156,50 @@ bar {
         status_command i3status
 }
 
+# window display config
+for_window [class="URxvt"] border 1pixel
 hide_edge_borders both
 
 # set the desktop wallpaper
-#exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/E7nof1h-Imgur.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/16\ -\ 1WjVQRN.jpg
 
 # start NetworkManager
 exec --no-startup-id nm-applet
 
 # some gnome helpers
-exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
-exec --no-startup-id gnome-keyring-daemon
+#exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
+#exec --no-startup-id gnome-keyring-daemon
 #exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-fallback-mount-helper
 #exec --no-startup-id /usr/lib/fingerprint-gui/fingerprint-polkit-agent -d
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec xcompmgr
+
+# open workspaces on specific monitors
+workspace "1 : shell" output LVDS-0
+workspace "2 : dev" output DP-0
+workspace "3 : www" output DP-5
+workspace "4 : chat" output LVDS-0
+workspace "5 : email" output LVDS-0
+workspace "10 : music" output LVDS-0
+
+# open work environment (3 monitor setup)
+#bindsym $mod+o exec ~/dotfiles/i3/open_work_env.sh
+
+# assign programs to open on certain workspaces
+assign [class="URxvt"] "1 : shell"
+assign [class="Sublime"] "2 : dev"
+assign [class="Google-chrome"] "3 : www"
+assign [class="Xchat"] "4 : chat"
+assign [class="Skype-bin"] "4 : chat"
+assign [class="Evolution"] "5 : email"
+assign [class="Spotify"] "10 : music"
+
+# exec default applications
+exec i3-sensible-terminal
+exec sublime
+exec google-chrome
+exec xchat
+exec skype
+exec evolution
+exec spotify
