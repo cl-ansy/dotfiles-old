@@ -23,8 +23,8 @@ set matchpairs+=<:> " show matching <> for html
 
 " Code folding
 " hotkey: za
-set foldmethod=indent
-set foldlevel=99
+" set foldmethod=indent
+" set foldlevel=99
 
 " Vim window management
 " Vertical Split : Ctrl+w + v
