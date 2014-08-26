@@ -8,6 +8,7 @@ fi
 # User specific aliases and functions
 alias ls="ls -h --color=auto"
 alias gls="git status"
+alias gfr="git fetch; git rebase"
 export PS1="\[\e[00;37m\]\u@\h:\[\e[0m\]\[\033[00;31m\][\w]\[\e[0m\]\[\e[00;37m\]\$ \[\e[0m\]"
 
 # location of python virtual envs
