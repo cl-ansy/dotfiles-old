@@ -1,0 +1,34 @@
+{
+	"bold_folder_labels": true,
+	"caret_style": "phase",
+	"color_scheme": "Packages/User/Tomorrow-Night (SL).tmTheme",
+	"font_face": "DejaVu Sans Mono",
+	"font_size": 10,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"pheonix_solid_current_tab": true,
+	"phoenix_color_expanded_folder": true,
+	"phoenix_dirty_bottom_bar": true,
+	"phoenix_dirty_bottom_bar_red": true,
+	"phoenix_draw_shadows": false,
+	"phoenix_eighties": false,
+	"phoenix_highlight_current_tab": true,
+	"phoenix_sidebar_tree_small": true,
+	"phoenix_tabs_auto_width": true,
+	"phoenix_tabs_font_normal": true,
+	"rulers":
+	[
+		100
+	],
+	"tab_size": 4,
+	"theme": "Phoenix Dark.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"use_tab_stops": true,
+	"word_wrap": true
+}
