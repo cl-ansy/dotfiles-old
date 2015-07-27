@@ -206,3 +206,6 @@ exec google-chrome
 #exec skype
 exec evolution
 #exec spotify
+
+# open wired connection
+exec nmcli con up em1
