@@ -11,6 +11,10 @@
 
 set $mod Mod1
 
+# i3 gaps
+gap_size 10
+for_window [class="^.*"] border pixel 3
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -157,7 +161,6 @@ bar {
 }
 
 # window display config
-for_window [class="URxvt"] border 1pixel
 hide_edge_borders both
 
 # set the desktop wallpaper
@@ -199,7 +202,7 @@ assign [class="Spotify"] "10 : music"
 exec i3-sensible-terminal
 exec sublime
 exec google-chrome
-exec xchat
-exec skype
+#exec xchat
+#exec skype
 exec evolution
-exec spotify
+#exec spotify
