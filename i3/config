@@ -12,7 +12,10 @@
 set $mod Mod1
 
 # i3 gaps
-gap_size 10
+# https://github.com/Airblader/i3
+# gap_size 10
+
+# remove window titles
 for_window [class="^.*"] border pixel 3
 
 # Font for window titles. Will also be used by the bar unless a different font
