@@ -11,12 +11,15 @@
 
 set $mod Mod1
 
-# i3 gaps
-# https://github.com/Airblader/i3
-# gap_size 10
-
 # remove window titles
 for_window [class="^.*"] border pixel 3
+
+# window display config
+hide_edge_borders both
+
+# i3 gaps
+# https://github.com/Airblader/i3
+gaps inner 10
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
@@ -157,14 +160,21 @@ bindsym XF86AudioRaiseVolume exec amixer -q sset Master 2%+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q sset Master 2%- unmute
 bindsym XF86AudioMute exec amixer -q sset Master toggle
 
-# Start i3bar to display a workspace bar (plus the system information i3status
+# Start i3bar to display a workspace bar (plus the system information py3status
 # finds out, if available)
 bar {
-        status_command i3status
+        status_command py3status
+        position top
+        colors {
+                separator #515151
+                background #2d2d2d
+                statusline #cccccc
+                focused_workspace #99cc99 #99cc99 #000000
+                active_workspace #333333 #333333 #ffffff
+                inactive_workspace #2d2d2d #2d2d2d #999999
+                urgent_workspace #f2777a #f2777a #ffffff
+        }
 }
-
-# window display config
-hide_edge_borders both
 
 # set the desktop wallpaper
 exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/16\ -\ 1WjVQRN.jpg
@@ -212,3 +222,9 @@ exec evolution
 
 # open wired connection
 exec nmcli con up em1
+
+# i3-style generated color scheme
+client.focused #99cc99 #99cc99 #000000 #2d2d2d
+client.focused_inactive #393939 #393939 #888888 #292d2e
+client.unfocused #2d2d2d #2d2d2d #999999 #292d2e
+client.urgent #2f343a #900000 #ffffff #900000
