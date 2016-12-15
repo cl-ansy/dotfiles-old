@@ -19,7 +19,8 @@ hide_edge_borders both
 
 # i3 gaps
 # https://github.com/Airblader/i3
-gaps inner 25
+#gaps inner 12
+#gaps outer 25
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
@@ -177,7 +178,8 @@ bar {
 }
 
 # set the desktop wallpaper
-exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/46\ -\ WeCSfbb.jpg
+# accidently nuked all my wallpapers, whoops
+exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/2CWDs83.jpg
 #exec_always --no-startup-id feh --randomize --bg-scale / ~/Pictures/Wallpapers/
 
 # start NetworkManager
@@ -204,22 +206,17 @@ workspace "10 : music" output LVDS-0
 #bindsym $mod+o exec ~/dotfiles/i3/open_work_env.sh
 
 # assign programs to open on certain workspaces
-assign [class="URxvt"] "1 : shell"
-assign [class="Atom"] "2 : dev"
-assign [class="Google-chrome"] "3 : www"
-assign [class="Xchat"] "4 : chat"
-assign [class="Skype-bin"] "4 : chat"
-assign [class="Evolution"] "5 : email"
-assign [class="Spotify"] "10 : music"
+assign [class="sublime"] "2 : dev"
+assign [class="google-chrome"] "3 : www"
+assign [class="thunderbird"] "5 : email"
+assign [class="skype"] "6 : chat"
+assign [class="spotify"] "10 : music"
 
 # exec default applications
 exec i3-sensible-terminal
-exec atom
+exec sublime
 exec google-chrome
-#exec xchat
-#exec skype
-exec evolution
-#exec spotify
+exec skype
 
 # open wired connection
 exec nmcli con up em1
@@ -229,3 +226,8 @@ client.focused #99cc99 #99cc99 #000000 #2d2d2d
 client.focused_inactive #393939 #393939 #888888 #292d2e
 client.unfocused #2d2d2d #2d2d2d #999999 #292d2e
 client.urgent #2f343a #900000 #ffffff #900000
+
+# make all tomenet game windows float by default for correct sizing
+for_window [class="TomeNET"] floating enable
+
+for_window [class="classflowdesktop"] floating enable

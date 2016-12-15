@@ -1,30 +1,9 @@
-#URxvt*tintColor: Blue
 URxvt*transparent: true
 URxvt*shading: 20
-URxvt*saveLines: 12000
-#URxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=12:antialias=true:hinting=true
-#URxvt*boldFont: xft:Bitstream Vera Sans Mono:bold:pixelsize=12:antialias=true:hinting=true
-#URxvt*font: xft:Inconsolata Mono:pixelsize=12:antialias=true:hinting=true
-URxvt*font: xft:DejaVu Sans Mono:pixelsize=12:antialias=true:hinting=true
-URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=12:antialias=true:hinting=true
-#URxvt*font: xft:Liberation Mono:pixelsize=13:antialias=true:hinting=true
-#URxvt*boldFont: xft:Liberation Mono:bold:pixelsize=13:antialias=true:hinting=true
-#URxvt*font: xft:terminus:pixelsize=15
-#URxvt*boldFont: xft:terminus:bold:pixelsize=15
-#URxvt*font:-*-courier-medium-r-normal-*-14-*-*-*-*-*-iso8859-1
-#URxvt*boldFont:-*-courier-bold-r-normal-*-14-*-*-*-*-*-iso8859-1
-#URxvt*color4: RoyalBlue
-#URxvt*color12: RoyalBlue
+URxvt*saveLines: 12000Mono:bold:pixelsize=18:antialias=true:hinting=true
+URxvt*font: xft:Ubuntu Mono:pixelsize=18:antialias=true:hinting=true:style=regular
+URxvt*boldFont: xft:Ubuntu Mono:bold:pixelsize=18:antialias=true:hinting=true
 URxvt*scrollBar: false
-#URxvt*scrollBar_right: false
-#URxvt*scrollstyle: plain
-
-# tabs
-#URxvt.perl-ext-common:  default,tabbed
-#URxvt.tabbed.tabbar-fg: 0
-#URxvt.tabbed.tabbar-bg: 15
-#URxvt.tabbed.tab-for: 0
-#URxvt.tabbed.tab-bg: 8
 
 URxvt*foreground: White
 URxvt*background: Black
@@ -54,24 +33,3 @@ URxvt*color14:          #a1cdcd
 # White
 URxvt*color7:           #BBBBBB
 URxvt*color15:          #EEEEEF
-
-
-#Tango color scheme
-#URxvt*foreground: white
-#URxvt*background: black
-#URxvt*color0:  #2E3436
-#URxvt*color1:  #a40000
-#URxvt*color2:  #4E9A06
-#URxvt*color3:  #C4A000
-#URxvt*color4:  #3465A4
-#URxvt*color5:  #75507B
-#URxvt*color6:  #ce5c00
-#URxvt*color7:  #babdb9
-#URxvt*color8:  #555753
-#URxvt*color9:  #EF2929
-#URxvt*color10: #8AE234
-#URxvt*color11: #FCE94F
-#URxvt*color12: #729FCF
-#URxvt*color13: #AD7FA8
-#URxvt*color14: #fcaf3e
-#URxvt*color15: #EEEEEC
